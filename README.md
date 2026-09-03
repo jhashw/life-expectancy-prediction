@@ -67,9 +67,9 @@ Two things explain it: those regions have fewer countries and are therefore unde
 Adding eight dummy variables for the nine regions brought the model to 26 independent variables, lifted adjusted R² from 0.9795 to 0.9841, and cut out-of-sample MSE from 1.9320 to 1.4946. The improvement landed almost entirely on the three regions that had been worst.
 
 MSE by Region Before:
-<img src="images/MSE_by_region_before.png" width="750" alt="MSE by region before adding region information">
+<img src="images/MSE_by_region_before.png" width="900" alt="MSE by region before adding region information">
 MSE by Region After:
-<img src="images/MSE_by_region_after.png" width="750" alt="MSE by region after adding region information">
+<img src="images/MSE_by_region_after.png" width="900" alt="MSE by region after adding region information">
 
 ### Variable selection improved interpretability at a small accuracy cost
 
