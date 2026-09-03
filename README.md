@@ -69,7 +69,7 @@ Adding eight dummy variables for the nine regions brought the model to 26 indepe
 MSE by Region Before:
 ![MSE by region before adding region information](/images/MSE_by_region_before.png)
 MSE by Region After:
-![MSE by region after adding region information](/images/MSE_by_region_before.png)
+![MSE by region after adding region information](/images/MSE_by_region_after.png)
 
 ### Variable selection improved interpretability at a small accuracy cost
 
