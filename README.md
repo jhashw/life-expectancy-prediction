@@ -35,7 +35,8 @@ Source: [Life Expectancy (WHO) Updated](https://www.kaggle.com/datasets/lashagoc
 
 **Correlation structure.** Mortality variables correlate strongly negatively with life expectancy, as expected. Developed status correlates positively. Immunization coverage moves with life expectancy across the board. The more interesting one is schooling, which shows a moderate positive correlation despite having no direct causal path to lifespan, and which stayed in the model through every variable selection round.
 
-<img src="images/correlatio_heatmap.png" width="600" alt="Correlation heatmap">
+<img src="images/correlation_heatmap.png" width="600" alt="Correlation heatmap">
+
 ![Correlation heatmap](/images/correlation_heatmap.png)
 
 **GDP shows sharp diminishing returns.** Plotting life expectancy against GDP per capita by region, the curve rises steeply at low income levels in Africa and South America and then flattens. Beyond a certain point, additional GDP per capita buys very little additional lifespan. This is the clearest argument in the analysis for why a purely economic model would be inadequate.
