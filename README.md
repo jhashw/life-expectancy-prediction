@@ -37,11 +37,9 @@ Source: [Life Expectancy (WHO) Updated](https://www.kaggle.com/datasets/lashagoc
 
 <img src="images/correlation_heatmap.png" width="600" alt="Correlation heatmap">
 
-![Correlation heatmap](/images/correlation_heatmap.png)
-
 **GDP shows sharp diminishing returns.** Plotting life expectancy against GDP per capita by region, the curve rises steeply at low income levels in Africa and South America and then flattens. Beyond a certain point, additional GDP per capita buys very little additional lifespan. This is the clearest argument in the analysis for why a purely economic model would be inadequate.
 
-![GDP against life expectancy by region showing non-linear trend](/images/gdp_life_expectancy_by_region.png)
+<img src="images/gdp_life_expectancy_by_region.png" width="600" alt="GDP against life expectancy by region showing non-linear trends">
 
 **Schooling behaves differently by region.** The positive relationship between years of education and life expectancy holds firmly in most regions but is noticeably less consistent in Asia and Africa, which was the first signal that region-specific effects mattered.
 
@@ -69,9 +67,9 @@ Two things explain it: those regions have fewer countries and are therefore unde
 Adding eight dummy variables for the nine regions brought the model to 26 independent variables, lifted adjusted R² from 0.9795 to 0.9841, and cut out-of-sample MSE from 1.9320 to 1.4946. The improvement landed almost entirely on the three regions that had been worst.
 
 MSE by Region Before:
-![MSE by region before adding region information](/images/MSE_by_region_before.png)
+<img src="MSE_by_region_before.png" width="750" alt="MSE by region before adding region information">
 MSE by Region After:
-![MSE by region after adding region information](/images/MSE_by_region_after.png)
+<img src="MSE_by_region_after.png" width="750" alt="MSE by region after adding region information">
 
 ### Variable selection improved interpretability at a small accuracy cost
 
@@ -85,7 +83,7 @@ Neither selected model beat the full one on out-of-sample MSE (1.5021 and 1.5105
 
 **The regression tree was too simple.** At 7.3424 out-of-sample MSE it was the worst model tested. Looking at the fitted tree explains why: every split is on a mortality variable (under-five deaths, adult mortality, infant deaths) and nothing else enters the model at all. It reduces to a coarse lookup table on mortality rates and discards the immunization, economic and education signal entirely.
 
-![Regression tree model](/images/regression_tree.png)
+<img src="regression_tree.png" width="600" alt="regression tree model showing model only splits on mortality metrics - too simplistic">
 
 **The neural networks overfit.** The 3-neuron model reached 0.8102 in-sample and 10.7218 out-of-sample. Widening to 5 neurons drove in-sample down to 0.5742 and out-of-sample up to 12.7334, which is the textbook signature of memorizing noise. With 2,685 training rows, there is not enough data to support that parameter count.
 
